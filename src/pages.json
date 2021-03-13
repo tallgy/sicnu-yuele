@@ -1,0 +1,85 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+			
+				"backgroundColor": "#007AFF",
+				"navigationBarBackgroundColor": "#007AFF"
+			}
+		},
+		{
+			"path": "pages/changePWD/changePWD",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		},
+		{
+			// 首页
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			// 商城
+			"path": "pages/shopping/shopping",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			// 家庭
+			"path": "pages/family/family",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path":"pages/person/person",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "悦乐",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#007AFF"
+	},
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#FFD305",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/homePageNoSelect.png",
+				"selectedIconPath": "static/tabbar/homePageSelect.png"
+			},
+			{
+				"pagePath": "pages/shopping/shopping",
+				"text": "商城",
+				"iconPath": "static/tabbar/shoppingNoSelect.png",
+				"selectedIconPath": "static/tabbar/shoppingSelect.png"
+			},
+			{
+				"pagePath": "pages/family/family",
+				"text": "家庭",
+				"iconPath": "static/tabbar/familyNoSelect.png",
+				"selectedIconPath": "static/tabbar/familySelect.png"
+			},
+			{
+				"pagePath": "pages/person/person",
+				"text": "个人",
+				"iconPath": "static/tabbar/personNoSelect.png",
+				"selectedIconPath": "static/tabbar/personSelect.png"
+			}
+		]
+	}
+
+}

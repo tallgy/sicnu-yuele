@@ -1,0 +1,84 @@
+/* 躯干盒子 */
+.body-box {
+	width: 100%;
+	height: 1185rpx;
+}
+
+/* 底部栏 */
+.bottom-bar {
+	width: 100%;
+	height: 100rpx;
+}
+
+/* 分类的按钮 */
+.classification-button {
+	width: 88rpx;
+	height: 88rpx;
+	margin: 20rpx;
+	padding: 10rpx;
+	background-color: #f2f2f2;
+	box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+	/* 圆角 */
+	border-radius: 25rpx;
+	display: inline-block;
+	/* flex-direction: column; */
+}
+
+/* 按钮图片 */
+.button-img {
+	width: 80rpx;
+	height: 80rpx;
+	margin: 5rpx;
+	margin-bottom: 10rpx;
+}
+
+/* 按钮文字 */
+.button-text {
+	font-size: 25rpx;
+}
+
+/* 视频 */
+.index-video {
+	margin: 40rpx;
+	width: 660rpx;
+	height: 400rpx;
+}
+/* 视频边框 */
+.video-frame {
+	width: 100%;
+}
+
+/* 次标题 */
+.submain-text {
+	font-size: 40rpx;
+	margin: 20rpx;
+	font-weight: 600;
+}
+
+/* 推荐框边 */
+.recommendation-border {
+	width: 260rpx;
+	height: 260rpx;
+	margin: 20rpx;
+	display: inline-block;
+}
+
+/* 推荐框 */
+.recommendation-box {
+	width: 250rpx;
+	height: 250rpx;
+	margin: auto;
+	/* background-color: #000000; */
+}
+
+/* 歌词宽度 */
+.lyric {
+	width: 450rpx;
+}
+
+/* 歌曲的按钮盒子 */
+.song-button-box {
+	margin: 20rpx;
+	width: 60rpx;
+	height: 60rpx;
+}

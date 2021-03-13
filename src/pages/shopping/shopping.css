@@ -1,0 +1,39 @@
+.body-box {}
+
+/* 带文字的按钮 */
+.text-button {
+	width: 150rpx;
+	height: 60rpx;
+	margin: 15rpx;
+	background-color: #ffaa00;
+	border-radius: 25rpx;
+	display: inline-block;
+}
+
+/* 文字居中 */
+.text-center {
+	text-align: center;
+	line-height: 60rpx;
+}
+
+/* 商品推荐框 */
+.product-recommendation-big {
+	margin: 10rpx;
+	border: 5px solid #ffffff;
+	width: 94%;
+	height: 200rpx;
+}
+.product-recommendation-im {
+	margin: 10rpx;
+	border: 5px solid #ffffff;
+	width: 62%;
+	height: 200rpx;
+}
+.product-recommendation-sm {
+	margin: 10rpx;
+	border: 5px solid #ffffff;
+	width: 32%;
+	height: 200rpx;
+}
+
+/* 抢购的商品名和抢购的数量占比部分 */
