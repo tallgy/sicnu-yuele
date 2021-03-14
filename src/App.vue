@@ -16,12 +16,7 @@
 	/*每个页面公共css */
 
 	/* 搜索框 */
-	.search-box {
-		background-color: #F48F00;
-		height: 90rpx;
-		width: 94%;
-		margin: 3%;
-	}
+
 
 	/* 轮播图 */
 	.carousel-map {}
@@ -35,8 +30,8 @@
 		white-space: nowrap;
 		/* 规定段落文本的换行 */
 	}
-	
-	
+
+
 	/* 次按钮 */
 	.submain-button {
 		border: 1px solid #949494;
@@ -114,6 +109,11 @@
 		height: 140rpx;
 	}
 
+	/* 内边 */
+	.padding-b10 {
+		padding-bottom: 10rpx;
+	}
+
 	.padding-t50 {
 		padding-top: 50rpx;
 	}
@@ -148,11 +148,11 @@
 	.margin-t15 {
 		margin-top: 15rpx;
 	}
-	
+
 	.margin-t20 {
 		margin-top: 20rpx;
 	}
-	
+
 	.margin-t30 {
 		margin-top: 30rpx;
 	}
@@ -160,10 +160,18 @@
 	.margin-t50 {
 		margin-top: 50rpx;
 	}
-	
+
 	/* 下边距 */
 	.margin-b5 {
 		margin-bottom: 5rpx;
+	}
+
+	.margin-b20 {
+		margin-bottom: 20rpx;
+	}
+	
+	.margin-l10-r10 {
+		margin: 0 10rpx;
 	}
 
 	/* 除了下边距 */
@@ -202,7 +210,7 @@
 		font-size: 25rpx;
 		font-family: Droid Sans Fallback;
 	}
-	
+
 	.font-40 {
 		font-style: normal;
 		font-size: 40rpx;
@@ -212,6 +220,13 @@
 	/* 横线 */
 	.horizontal-line {
 		height: 2rpx;
+		background-color: #c8c8c8;
+	}
+	
+	/* 竖线 */
+	.vertical-line {
+		width: 2rpx;
+		height: auto;
 		background-color: #c8c8c8;
 	}
 
@@ -240,6 +255,12 @@
 		/* flex-direction: row; */
 		align-items: center;
 	}
+	
+	.vertical-center-one-line {
+		display: flex;
+		/* flex-direction: row; */
+		align-items: center;
+	}
 
 	.in-box-center {
 		/* 设置布局为 flex 布局 */
@@ -259,15 +280,15 @@
 	.bg-red {
 		background-color: #ff0000;
 	}
-	
+
 	.bg-light-blue {
 		background-color: #55aaff;
 	}
-	
+
 	.bg-pink {
 		background-color: #ffaaff;
 	}
-	
+
 	.bg-light-yellow {
 		background-color: #f8e2d8;
 	}
@@ -297,7 +318,7 @@
 		width: 300rpx;
 		height: 70rpx;
 	}
-	
+
 	.rectangle-w350-h35 {
 		width: 350rpx;
 		height: 35rpx;
@@ -317,6 +338,14 @@
 	/* 宽度 */
 	.width-48p {
 		width: 48%;
+	}
+	
+	.width-60p {
+		width: 60%;
+	}
+	
+	.width-70p {
+		width: 70%;
 	}
 
 	.width-height-100p {

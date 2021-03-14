@@ -2,7 +2,7 @@
 	<view>
 
 		<!-- 搜索框 -->
-		<view class="search-box">搜索框</view>
+		<search-box></search-box>
 
 		<!-- 图片轮转 -->
 		<view class="carousel-map">

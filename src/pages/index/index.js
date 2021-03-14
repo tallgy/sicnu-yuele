@@ -111,8 +111,11 @@ export default {
 			],
 
 			//音乐播放
-			songName: 'My Heart Will Go On', //歌曲名称
-			songLyricList: '', //所有歌词
+			songInfo: {
+				songImgUrl: '../../static/index/songImg.jpg',	//图片的地址
+				songName: 'My Heart Will Go On', //歌曲名称
+				songLyricList: '', //所有歌词
+			},
 			songLyricCurrent: 'You\'re here there’s nothing I fear', //当前播放的歌词位置
 			playImgUrl: '../../static/index/play.png', //播放图片
 			stopImgUrl: '../../static/index/stop.png', //暂停图片
@@ -142,27 +145,27 @@ export default {
 				}
 			}
 		},
-		
+
 		//每日推荐的点击
 		recommendationClick(index) {
 			console.log("每日推荐" + index);
 		},
-		
+
 		//最近在学
 		myStudyClick(index) {
 			console.log("最近在学" + index);
 		},
-		
+
 		//课堂直播
 		liveBroadcastClick(index) {
 			console.log("课堂直播" + index);
 		},
-		
+
 		//人气好课
 		popularClassClick(index) {
 			console.log("人气好课" + index);
 		},
-		
+
 		//查看更多的点击
 		GetMoreInfo(index) {
 			if (index == 0) {

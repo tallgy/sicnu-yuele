@@ -4,7 +4,7 @@
 
 		<scroll-view scroll-y="true" class="body-box">
 			<!-- 搜索框 -->
-			<view class="search-box">搜索框</view>
+			<search-box></search-box>
 
 			<!-- 图片轮转 -->
 			<view class="carousel-map">
@@ -83,9 +83,9 @@
 
 		<!-- 底部 音乐播放 -->
 		<view class="bottom-bar horizontal-layout margin-t20">
-			<image class="radius-circle square-90 margin-5 margin-l30" src="../../static/login/account.png"></image>
-			<view class="margin-l30 margin-t15">
-				<view class="font-weight-600">{{songName}}</view>
+			<image class="radius-circle square-90 margin-5" :src="songInfo.songImgUrl"></image>
+			<view class="margin-t15">
+				<view class="font-weight-600">{{songInfo.songName}}</view>
 				<view class="font-weight-300 font-25 margin-t10 lyric">{{songLyricCurrent}}</view>
 			</view>
 			<image :src="playSongFlag ? playImgUrl: stopImgUrl" @click="playSong" class="song-button-box margin-l30"></image>

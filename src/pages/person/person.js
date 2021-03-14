@@ -1,244 +1,178 @@
-	var _self, page = 1,
-		timer = null;
+var _self, page = 1,
+	timer = null;
 
-	export default {
-		data() {
-			return {
-				
-				nickName: '小叮当',	//昵称
-				autograph: '不会',	//个性签名
-				
-				
-				imgUrl: '../../static/person/calendar.png',
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				isloading: false,
-				userinfo: {
-					name: '王五',
-					sex: '男',
-					id: '2018113311',
-					phone: '18525348852',
-					identity: '超级管理员',
-					id_number: '520*********2351',
-					college_id: '001',
-					college_name: '计算机科学学院',
-					register: '2020-11-14',
-					note: '该用户比较勤快，暂时没有备注',
-					birth_date: '1999-02-15',
-					post: '教授',
-					email: '123412@qq.com',
-				},
-				imgUrl: '/static/info/images/headPortrait.jpg',
+export default {
+	data() {
+		return {
 
-				page: 0, //当前分页页码
-				apiUrl: '', //后端接口地址
-				id: '', //传值使用,方便存在本地的locakStorage  
-				del_id: '' //方便存在本地的locakStorage  
-			}
-		},
-		components: {
-
-		},
-		onLoad(options) {
-			_self = this;
-
-			//检查是否登录参考代码,需要用的时候，可以把注释取掉
-			//if(this.checkLogin()==false){
-			//	return;
-			//}
-			//this.getLaction();//得到gps
-			this.page = 0;
-			//检测有没有传入id参数
-			if (options.id != null && options.id != "") {
-				this.id = options.id;
-			}
-			//执行初始化,需要用的时候，可以把注释取掉
-			//this.Refresh("init");
-		},
-		onShow() {
-			console.log("on show");
-			//if(this.checkLogin()==false){
-			//	return;
-			//}
-
-			//执行初始化,需要用的时候，可以把注释取掉
-			//this.Refresh("init");
-		},
-		onPullDownRefresh: function() {
-			//下拉刷新的时候请求一次数据
-			this.Refresh();
-		},
-		methods: {
-			exit() {
-				uni.showModal({
-				    title: '提示',
-				    content: '是否要退出并删除信息',
-				    success: function (res) {
-				        if (res.confirm) {
-				            console.log('用户点击确定');
-							uni.setStorage({
-								key: 'token',
-								data: null,
-							});
-							uni.setStorage({
-								key: 'userId',
-								data: null,
-							});
-							uni.navigateTo({
-								url: '/pages/login/login',
-							});
-				        } else if (res.cancel) {
-				            console.log('用户点击取消');
-				        }
-				    }
-				});
+			userInfo: {
+				imgUrl: '../../static/person/headPortrait.jpg',
+				nickName: '小叮当', //昵称
+				autograph: '不会啊沙发沙发撒啊啊啊啊', //个性签名
 			},
-			/**
-			 * photo_63处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			photo_63_click: function(event) {
+			//每日签到的图片
+			calendarImgUrl: '../../static/person/calendar.png',
 
+
+
+			//我的关注
+			myFollow: {
+				name: '我的关注',
+				imgUrl: '../../static/person/myFollow.png',
+				number: 12,
+			},
+			//关注我的
+			followMe: {
+				name: '关注我的',
+				imgUrl: '../../static/person/followMe.png',
+				number: 32,
+			},
+			//我都金币
+			myGoldCoin: {
+				name: '我的金币',
+				imgUrl: '../../static/person/goldCoin.png',
+				number: 3214,
+			},
+			//我的等级
+			myLevel: {
+				name: '我的等级',
+				imgUrl: '../../static/person/level.png',
+				number: 21,
 			},
 
-			/**
-			 * row4_65处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			row4_65_click: function(event) {
-
-				uni.navigateTo({
-					url: '/pages/nav/nav'
-				})
-			},
-
-			/**
-			 * info_68_68处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			info_68_68_click: function(event) {
-
-			},
-
-			/**
-			 * row3_70处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			row3_70_click: function(event) {
-
-				uni.navigateTo({
-					url: '/pages/nav/nav'
-				})
-			},
-
-			/**
-			 * info_73_73处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			info_73_73_click: function(event) {
-
-			},
-
-			/**
-			 * row2_75处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			row2_75_click: function(event) {
-				uni.navigateTo({
-					url: '/pages/nav/nav'
-				})
-			},
-
-			/**
-			 * row1_80处理函数
-			 * 数据绑定  data-index="{{index}}" 
-			 * 数据取值  var index = e.currentTarget.dataset.index; var cata = this.list_cata_list[index];
-			 */
-			row1_80_click: function(event) {
-				uni.navigateTo({
-					url: '/pages/nav/nav'
-				})
-			},
-
-			//刷新数据
-			Refresh: function(_action) {
-				//提交到服务器
-				// var that = this
-				// var url = that.apiUrl + '{server_code_file_path}';
-				// console.log(url);
-
-				// uni.request({
-				// 	url: url, //后端接口地址，需要改成自己的接口地址
-				// 	data: {
-				// 		action: _action, //上传动作，如按钮点击会产生click动作，分页也会产生，在后端根据具体的动作来判断事件
-				// 		uid: that.getUid(), //上传用户id,在登录中获得
-				// 		//上传页面中的变量
-				// 		//定义变量---start
-
-				// 		//定义变量---end
-				// 		id: that.id, //上传id值，后端可以根据此值来操作当前id
-				// 		del_id: that.del_id, //在列表中删除按钮选中时，上传到有后端，进行删除操作
-				// 		page: that.page
-				// 	},
-				// 	method: 'GET',
-				// 	success: function(res) { //后端返回数据
-
-				// 		// 隐藏导航栏加载框  
-				// 		uni.hideNavigationBarLoading();
-				// 		// 停止下拉动作  
-				// 		uni.stopPullDownRefresh();
-
-				// 		// 隐藏加载框  
-				// 		uni.hideLoading();
-				// 		var tmp = res.data;
-
-				// 		//初始化，对页面上的控件进行赋值操作
-				// 		if (_action == "init") {
-				// 		}
-				// 		{
-				// 			deal_listpages
-				// 		}
-
-				// 		//如果后端有返回消息，则弹出消息提示
-				// 		if (tmp.message != null && tmp.message != "") {
-				// 			uni.showToast({
-				// 				title: tmp.message,
-				// 				icon: 'none',
-				// 				duration: 2000
-				// 			})
-				// 		}
-
-				// 		//如果后端有返回页码，则更改当前页码
-				// 		if (tmp.page != null && tmp.page != "") {
-				// 			page = tmp.page;
-				// 		}
-				// 	},
-				// 	fail: function(res) {
-				// 		uni.showToast({
-				// 			title: "服务器访问失败",
-				// 			icon: 'none',
-				// 			duration: 2000
-				// 		})
-				// 		console.log(res.data);
-				// 		console.log('is failed')
-				// 	}
-				// })
-			},
 		}
+	},
+	components: {
+
+	},
+	onLoad(options) {
+		// 信息处理
+		this.onLoadDealInfo();
+
+		_self = this;
+
+		//检查是否登录参考代码,需要用的时候，可以把注释取掉
+		//if(this.checkLogin()==false){
+		//	return;
+		//}
+		//this.getLaction();//得到gps
+		this.page = 0;
+		//检测有没有传入id参数
+		if (options.id != null && options.id != "") {
+			this.id = options.id;
+		}
+		//执行初始化,需要用的时候，可以把注释取掉
+		//this.Refresh("init");
+	},
+	onShow() {
+		console.log("on show");
+		//if(this.checkLogin()==false){
+		//	return;
+		//}
+
+		//执行初始化,需要用的时候，可以把注释取掉
+		//this.Refresh("init");
+	},
+	onPullDownRefresh: function() {
+		//下拉刷新的时候请求一次数据
+		this.Refresh();
+	},
+	methods: {
+		//加载的信息处理
+		onLoadDealInfo() {
+			this.dealAutograph();
+		},
+		//签名的处理，把超过的字简化成... 最长12个
+		dealAutograph() {
+			var len = this.userInfo.autograph.length;
+			if (len >= 12) {
+				var result = this.userInfo.autograph.substr(0, 11);
+				result += '...';
+				console.log(result);
+				this.userInfo.autograph = result;
+			}
+		},
+		//个人信息的点击
+		personInfoClick() {
+			console.log("个人信息的点击");
+		},
+		//每日签到的点击
+		signInClick() {
+			console.log("每日签到的点击");
+		},
+		//我的关注，关注我的，我的金币，我的等级 的按钮的点击
+		buttonHorFourClick(index) {
+			if (index == 1) {
+				console.log("横向布局的四个按钮的点击" + index);
+			} else if (index == 2) {
+				console.log("横向布局的四个按钮的点击" + index);
+			} else if (index == 3) {
+				console.log("横向布局的四个按钮的点击" + index);
+			} else if (index == 4) {
+				console.log("横向布局的四个按钮的点击" + index);
+			} else {
+				console.log("意外错误的点击");
+			}
+		},
+		//我的课程，我的收藏，我的消息，我的订单，会员中心，我的设置，我的帮助 的按钮的点击
+		buttonListClick(index) {
+			if (index == 1) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 2) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 3) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 4) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 5) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 6) {
+				console.log("一堆的按钮的点击 " + index);
+			} else if (index == 7) {
+				console.log("一堆的按钮的点击 " + index);
+			} else {
+				console.log("意外错误的点击 ");
+			}
+		},
+		//切换账户点击
+		buttonExchangeClick() {
+			console.log("切换账户的点击");
+		},
+		//退出登录的点击
+		buttonExitClick() {
+			console.log("退出登录的点击");
+		},
+
+
+		exit() {
+			uni.showModal({
+				title: '提示',
+				content: '是否要退出并删除信息',
+				success: function(res) {
+					if (res.confirm) {
+						console.log('用户点击确定');
+						uni.setStorage({
+							key: 'token',
+							data: null,
+						});
+						uni.setStorage({
+							key: 'userId',
+							data: null,
+						});
+						uni.navigateTo({
+							url: '/pages/login/login',
+						});
+					} else if (res.cancel) {
+						console.log('用户点击取消');
+					}
+				}
+			});
+		},
+		//刷新数据
+		Refresh: function(_action) {
+			//提交到服务器
+
+		},
+
 	}
+}
