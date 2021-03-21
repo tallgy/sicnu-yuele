@@ -1,0 +1,14 @@
+.main-box {
+	background-color: #ffffff;
+	width: 94%;
+	height: auto;
+	margin: 3%;
+	/* 规定段落文本的换行 */
+}
+
+.horizontal-scroll-x {
+	display: inline-block;
+	align-items: center;
+}
+
+/* .width- */

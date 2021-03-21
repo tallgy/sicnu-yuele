@@ -1,0 +1,9 @@
+.courseButton {
+	display: inline-block;
+}
+
+/* 新课推荐 */
+.recommendImgBox {
+	width: 300rpx;
+	height: 150rpx;
+}

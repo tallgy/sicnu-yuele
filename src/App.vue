@@ -23,14 +23,12 @@
 
 	/* 次盒子 */
 	.submain-box {
-		background-color: #ffffff;
 		width: 94%;
 		height: auto;
 		margin: 3%;
 		white-space: nowrap;
 		/* 规定段落文本的换行 */
 	}
-
 
 	/* 次按钮 */
 	.submain-button {
@@ -98,6 +96,11 @@
 		width: 90rpx;
 		height: 90rpx;
 	}
+	
+	.square-100 {
+		width: 100rpx;
+		height: 100rpx;
+	}
 
 	.square-110 {
 		width: 110rpx;
@@ -108,8 +111,17 @@
 		width: 140rpx;
 		height: 140rpx;
 	}
+	
+	.square-250 {
+		width: 250rpx;
+		height: 250rpx;
+	}
 
 	/* 内边 */
+	.padding-10 {
+		padding: 10rpx;
+	}
+	
 	.padding-b10 {
 		padding-bottom: 10rpx;
 	}
@@ -134,6 +146,15 @@
 	/* 左边距 */
 	.margin-l30 {
 		margin-left: 30rpx;
+	}
+	
+	/* 右边距 */
+	.margin-r10 {
+		margin-right: 10rpx;
+	}
+	
+	.margin-r20 {
+		margin-right: 20rpx;
 	}
 
 	/* 上边距 */
@@ -165,13 +186,29 @@
 	.margin-b5 {
 		margin-bottom: 5rpx;
 	}
+	
+	.margin-b15 {
+		margin-bottom: 15rpx;
+	}
 
 	.margin-b20 {
 		margin-bottom: 20rpx;
 	}
 	
+	.margin-b30 {
+		margin-bottom: 30rpx;
+	}
+	
 	.margin-l10-r10 {
 		margin: 0 10rpx;
+	}
+	
+	.margin-t10-b10 {
+		margin: 10rpx 0;
+	}
+	
+	.margin-t20-b20 {
+		margin: 20rpx 0;
 	}
 
 	/* 除了下边距 */
@@ -292,6 +329,10 @@
 	.bg-light-yellow {
 		background-color: #f8e2d8;
 	}
+	
+	.bg-grey {
+		background-color: #ababab;
+	}
 
 	/* 边框 */
 	.frame-1-s-red {
@@ -340,6 +381,10 @@
 		width: 48%;
 	}
 	
+	.width-50p {
+		width: 50%;
+	}
+	
 	.width-60p {
 		width: 60%;
 	}
@@ -353,4 +398,9 @@
 		width: 100%;
 		height: 100%;
 	}
+	
+	.height-300rp {
+		height: 300rpx;
+	}
+	
 </style>

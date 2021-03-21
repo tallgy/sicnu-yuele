@@ -16,7 +16,9 @@
 		},
 		methods: {
 			searchClick() {
-				console.log("点击了搜索框");
+				uni.navigateTo({
+					url: '../../pages/search/search'
+				});
 			}
 		},
 	}

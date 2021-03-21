@@ -42,6 +42,48 @@
 				"navigationBarTitleText": "个人信息",
 				"enablePullDownRefresh": true
 			}
+		},
+		{
+			//搜索框
+			"path": "pages/search/search",
+			"style": {
+				// "navigationBarTitleText": "",
+			}
+		},
+		{
+			// 音乐专区
+			"path": "pages/musicZone/musicZone",
+			"style": {
+				
+			}
+		},
+		{
+			// 乐谱推荐
+			"path": "pages/musicScoreRecommendation/musicScoreRecommendation",
+			"style": {
+				
+			}
+		},
+		{
+			// 社区广场
+			"path": "pages/communitySquare/communitySquare",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			// 课程学习
+			"path": "pages/courseLearning/courseLearning",
+			"style": {
+				
+			}
+		},
+		{
+			// 会员专区
+			"path": "pages/VIPZone/VIPZone",
+			"style": {
+				
+			}
 		}
 	],
 	"globalStyle": {

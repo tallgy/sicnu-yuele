@@ -134,7 +134,40 @@ export default {
 
 		// 按钮的点击事件的序号判断
 		subMainButtonClick(index) {
-			console.log("四个主按钮" + index);
+			if (index == 0) {
+				// 音乐专区
+				console.log("音乐专区");
+				uni.navigateTo({
+					// url: 'file:/D:/Documents/Code/WeChat/悦乐/music/src/pages/index/index.vue'
+					url: '../../pages/musicZone/musicZone'
+				});
+			} else if (index == 1) {
+				// 乐谱推荐
+				console.log("乐谱推荐");
+				uni.navigateTo({
+					url: '../../pages/musicScoreRecommendation/musicScoreRecommendation'
+				});
+			} else if (index == 2) {
+				// 社区广场
+				console.log("社区广场");
+				uni.navigateTo({
+					url: '../../pages/communitySquare/communitySquare'
+				});
+			} else if (index == 3) {
+				// 课程学习
+				console.log("课程学习");
+				uni.navigateTo({
+					url: '../../pages/courseLearning/courseLearning'
+				});
+			} else if (index == 4) {
+				// 会员专区
+				console.log("会员专区");
+				uni.navigateTo({
+					url: '../../pages/VIPZone/VIPZone'
+				});
+			} else {
+				console.log("错误的点击");
+			}
 		},
 
 		//输入带 json对象的数组， json里面有 text 文本，判断文本超过len便使flag为true，可以用于滚动
