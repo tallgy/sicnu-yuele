@@ -21,22 +21,22 @@
 			<!-- 我的关注，关注我的，我的金币，我的等级 -->
 			<view class="horizontal-layout margin-t30 padding-b10">
 				<view class="horizontal-center button-box" @click="buttonHorFourClick(1)">
-					<p class="button-text radius-20">{{myFollow.name}}</p>
+					<p class="button-text font-25 radius-20">{{myFollow.name}}</p>
 					<image class="square-60 button-img" :src="myFollow.imgUrl"></image>
 					<p>{{myFollow.number}}</p>
 				</view>
 				<view class="horizontal-center button-box" @click="buttonHorFourClick(2)">
-					<p class="button-text radius-20">{{followMe.name}}</p>
+					<p class="button-text font-25 radius-20">{{followMe.name}}</p>
 					<image class="square-60 button-img" :src="followMe.imgUrl"></image>
 					<p>{{followMe.number}}</p>
 				</view>
 				<view class="horizontal-center button-box" @click="buttonHorFourClick(3)">
-					<p class="button-text radius-20">{{myGoldCoin.name}}</p>
+					<p class="button-text font-25 radius-20">{{myGoldCoin.name}}</p>
 					<image class="square-60 button-img" :src="myGoldCoin.imgUrl"></image>
 					<p>{{myGoldCoin.number}}</p>
 				</view>
 				<view class="horizontal-center button-box" @click="buttonHorFourClick(4)">
-					<p class="button-text radius-20">{{myLevel.name}}</p>
+					<p class="button-text font-25 radius-20">{{myLevel.name}}</p>
 					<image class="square-60 button-img" :src="myLevel.imgUrl"></image>
 					<p>{{myLevel.number}}</p>
 				</view>
